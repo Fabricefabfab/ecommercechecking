@@ -1,6 +1,6 @@
 <?php
 
-include './MOdel/conn.php';
+include 'Model/conn.php';
 
 $pid = $_GET['pid'];
 
