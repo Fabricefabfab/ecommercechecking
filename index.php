@@ -20,9 +20,53 @@
  <br><br>
  <h1 class="text-warning text-center" > A phonebook App</h1>
  <br>
- <form method="get" action="insert.php">
-  <button class="btn btn-success" type="submit" name="done"> Add data</button>
+
+ <?php
+
+include './Model/conn.php';
+
+if(isset($_POST['done'])){
+
+ $pname = $_POST['pname'];
+ $pphoned = $_POST['pphoned'];
+ $q = " INSERT INTO phonebook(pname, pphoned) VALUES ( '$pname', '$pphoned' )";
+
+ $query = mysqli_query($conn,$q);
+ header('location:index.php');
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+ <div class="col-lg-6 m-auto">
+ 
+ <form method="post">
+ 
+ <div class="card">
+
+
+ <label> pname: </label>
+ <input type="text" name="pname" class="form-control"> <br>
+
+ <label> pphoned: </label>
+ <input type="text" name="pphoned" class="form-control"> <br>
+
+ <button class="btn btn-success" type="submit" name="done"> Add </button><br>
+ </div>
  </form>
+ </div>
+
  <br>
 
  <table  id="tabledata" class=" table table-striped table-hover table-bordered">
@@ -38,8 +82,6 @@
  </tr >
 
  <?php
-
- include './Model/conn.php'; 
  $q = "select * from phonebook";
 
  $query = mysqli_query($conn,$q);
