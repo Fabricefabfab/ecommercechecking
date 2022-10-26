@@ -4,7 +4,7 @@ include 'Model/conn.php';
 
 $pid = $_GET['pid'];
 
-$q = " DELETE FROM `phonebook` WHERE pid = $pid ";
+$q = " DELETE FROM phonebook WHERE pid = $pid ";
 
 mysqli_query($conn, $q);
 
