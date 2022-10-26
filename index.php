@@ -75,8 +75,8 @@ if(isset($_POST['done'])){
  <td> <?php echo $res['pid'];  ?> </td>
  <td> <?php echo $res['pname'];  ?> </td>
  <td> <?php echo $res['pphoned'];  ?> </td>
- <td> <button class="btn-danger btn"> <a href="../delete.php?pid=<?php echo $res['pid']; ?>" class="text-white"> Delete </a>  </button> </td>
- <td> <button class="btn-primary btn"> <a href="../update.php?pid=<?php echo $res['pid']; ?>" class="text-white"> Update </a> </button> </td>
+ <td> <button class="btn-danger btn"> <a href="/../delete.php?pid=<?php echo $res['pid']; ?>" class="text-white"> Delete </a>  </button> </td>
+ <td> <button class="btn-primary btn"> <a href="/../update.php?pid=<?php echo $res['pid']; ?>" class="text-white"> Update </a> </button> </td>
 
  </tr>
  
