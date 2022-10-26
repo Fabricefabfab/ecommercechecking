@@ -7,7 +7,7 @@
  $pid = $_GET['pid'];
  $pname = $_POST['pname'];
  $pphoned = $_POST['pphoned'];
- $q = " update Phonebook set pid=$pid, pname='$pname', pphoned='$pphoned' where pid=$pid  ";
+ $q = " update phonebook set pid=$pid, pname='$pname', pphoned='$pphoned' where pid=$pid  ";
 
  $query = mysqli_query($conn,$q);
 
